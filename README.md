@@ -175,8 +175,10 @@ To be completed :grinning:.
 
 - [/] Base Rules
 	- [x] h1-h6
-	- [ ] ul, ol, li
-	- [ ] em, strong, sub, sup
+	- [x] ul
+  - [x] li
+  - [ ] ol
+	- [x] em, strong, sub, sup
 - [/] Partial Rulesets
 	- [ ] inline
 	- [ ] critic
@@ -188,40 +190,40 @@ To be completed :grinning:.
 	- [ ] Video
 	- [ ] Audio
 - [ ] Complete Rulesets
-	- [ ]  [CommonMark](http://spec.commonmark.org/" rel="nofollow)
-	- [ ]  [CriticMarkup](http://criticmarkup.com/spec.php" rel="nofollow)
-	- [ ]  [Discount](http://www.pell.portland.or.us/~orc/Code/discount/#Language.extensions" rel="nofollow)
-	- [ ]  [DocFX](https://dotnet.github.io/docfx/index.html" rel="nofollow)
+	- [ ] [CommonMark](http://spec.commonmark.org/)
+	- [ ]  [CriticMarkup](http://criticmarkup.com/spec.php)
+	- [ ]  [Discount](http://www.pell.portland.or.us/~orc/Code/discount/#Language.extensions)
+	- [ ]  [DocFX](https://dotnet.github.io/docfx/index.html)
 	- [ ]  [Ghost's Markdown/Haunted Markdown](https://github.com/TryGhost/Ghost/wiki/Future-of-Markdown#features)
 	- [ ]  [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/)
-	- [ ]  [with login](https://gitlab.com/help/user/markdown.md" rel="nofollow)
-	- [ ]  [Haroopad Flavored Markdown](http://pad.haroopress.com/page.html?f=haroopad-flavored-markdown" rel="nofollow)
-	- [ ]  [iA Writer's Markdown](https://ia.net/writer/support/general/markdown-guide" rel="nofollow)
-	- [ ]  [Kramdown](http://kramdown.gettalong.org/quickref.html" rel="nofollow)
-	- [ ]  [Leanpub Flavored Markdown](https://leanpub.com/help/manual#leanpub-auto-markdown-extensions-in-leanpub" rel="nofollow)
-	- [ ]  [Litedown](http://s9etextformatter.readthedocs.org/Plugins/Litedown/Synopsis/" rel="nofollow)
-	- [ ]  [Lunamark](http://jgm.github.io/lunamark/lunamark.1.html" rel="nofollow)
-	- [ ]  [Madoko](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html" rel="nofollow)
-	- [ ]  [Markdown](http://daringfireball.net/projects/markdown/syntax" rel="nofollow)
-	- [ ]  [Markdown 2](https://markdown2.github.io/docs/home.html" rel="nofollow)
-	- [ ]  [Markdown Extra](https://michelf.ca/projects/php-markdown/extra/" rel="nofollow)
+	- [ ]  [with login](https://gitlab.com/help/user/markdown.md)
+	- [ ]  [Haroopad Flavored Markdown](http://pad.haroopress.com/page.html?f=haroopad-flavored-markdown)
+	- [ ]  [iA Writer's Markdown](https://ia.net/writer/support/general/markdown-guide)
+	- [ ]  [Kramdown](http://kramdown.gettalong.org/quickref.html)
+	- [ ]  [Leanpub Flavored Markdown](https://leanpub.com/help/manual#leanpub-auto-markdown-extensions-in-leanpub)
+	- [ ]  [Litedown](http://s9etextformatter.readthedocs.org/Plugins/Litedown/Synopsis/)
+	- [ ]  [Lunamark](http://jgm.github.io/lunamark/lunamark.1.html)
+	- [ ]  [Madoko](http://research.microsoft.com/en-us/um/people/daan/madoko/doc/reference.html)
+	- [ ]  [Markdown](http://daringfireball.net/projects/markdown/syntax)
+	- [ ]  [Markdown 2](https://markdown2.github.io/docs/home.html)
+	- [ ]  [Markdown Extra](https://michelf.ca/projects/php-markdown/extra/)
 	- [ ]  [Markdown-it](https://github.com/markdown-it/markdown-it#syntax-extensions)
-	- [ ]  [Markua](https://leanpub.com/markua/read" rel="nofollow)
-	- [ ]  [Maruku](http://maruku.rubyforge.org/maruku.html" rel="nofollow)
-	- [ ]  [MultiMarkdown](http://fletcher.github.io/MultiMarkdown-4/" rel="nofollow)
-	- [ ]  [Pandoc's Markdown](http://pandoc.org/README.html#pandocs-markdown" rel="nofollow)
+	- [ ]  [Markua](https://leanpub.com/markua/read)
+	- [ ]  [Maruku](http://maruku.rubyforge.org/maruku.html)
+	- [ ]  [MultiMarkdown](http://fletcher.github.io/MultiMarkdown-4/)
+	- [ ]  [Pandoc's Markdown](http://pandoc.org/README.html#pandocs-markdown)
 	- [ ]  [PHP Markdown Extra Extended](https://github.com/egil/php-markdown-extra-extended)
-	- [ ]  [Python Markdown](http://pythonhosted.org/Markdown/extensions/" rel="nofollow)
+	- [ ]  [Python Markdown](http://pythonhosted.org/Markdown/extensions/)
 	- [ ]  [Redcarpet](https://github.com/vmg/redcarpet)
 	- [ ]  [Remarkable](https://github.com/jonschlinkert/remarkable#syntax-extensions)
-	- [ ]  [Rhythmus](http://rhythmus.be/building-a-magazine/#extending-markdown" rel="nofollow)
-	- [ ]  [Scholarly Markdown](http://scholarlymarkdown.com/Scholarly-Markdown-Guide.html" rel="nofollow)
+	- [ ]  [Rhythmus](http://rhythmus.be/building-a-magazine/#extending-markdown)
+	- [ ]  [Scholarly Markdown](http://scholarlymarkdown.com/Scholarly-Markdown-Guide.html)
 	- [ ]  [Showdown](https://github.com/showdownjs/showdown/wiki/Known-Differences-in-Output)
-	- [ ]  [StackOverflow's Markdown](http://stackoverflow.com/editing-help" rel="nofollow)
-	- [ ]  [Taiga Markdown](https://tree.taiga.io/support/misc/taiga-markdown-syntax/" rel="nofollow)
-	- [ ]  [Trello's Markdown](http://help.trello.com/article/821-using-markdown-in-trello" rel="nofollow)
-	- [ ]  [vfmd](http://www.vfmd.org/vfmd-spec/syntax/" rel="nofollow)
-	- [ ]  [Xcode/Swift Playgrounds Markup](https://developer.apple.com/library/ios/documentation/Xcode/Reference/xcode_markup_formatting_ref/index.html#//apple_ref/doc/uid/TP40016497" rel="nofollow)
+	- [ ]  [StackOverflow's Markdown](http://stackoverflow.com/editing-help)
+	- [ ]  [Taiga Markdown](https://tree.taiga.io/support/misc/taiga-markdown-syntax/)
+	- [ ]  [Trello's Markdown](http://help.trello.com/article/821-using-markdown-in-trello)
+	- [ ]  [vfmd](http://www.vfmd.org/vfmd-spec/syntax)
+	- [ ]  [Xcode/Swift Playgrounds Markup](https://developer.apple.com/library/ios/documentation/Xcode/Reference/xcode_markup_formatting_ref/index.html#//apple_ref/doc/uid/TP40016497)
 
 [mathjs]: <https://mathjs.org> "mathjs"
 [mathjax]: <https://mathjax.org> "mathjax"
@@ -232,14 +234,14 @@ To be completed :grinning:.
 
 ## Release Notes
 
-### Release 0.1.9
+### Release 0.1.11
 
-basic functionality
-headers
-unordered list
-em, strong, sub, sup
-ins, del, mark, comment
-mathjax
+tidy readme
+
+
+### Release 0.1.10
+
+tidy readme
 
 
 ### Release 0.1.8
