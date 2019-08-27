@@ -145,11 +145,9 @@ These are various flavors of markdown, some or all for which I hope to write rul
 
 add to readme specs
 
-
 ### Release 0.1.13
 
 added keywords to package.json
-
 
 ### Release 0.1.12
 
