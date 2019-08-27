@@ -1,6 +1,6 @@
 {
   "name": "@mithray/smd",
-  "version": "0.1.7",
+  "version": "0.1.9",
   "description": "A markdown flavor designed to be modular, customizable, with additional options like styling and HTML wrapping.",
   "bin": {
     "smd": "./bin/smd.js"
@@ -9,28 +9,29 @@
   "license": "MIT",
   "dependencies": {
     "ansi-colors": "^3.2.4",
+    "caporal": "^1.3.0",
     "change-case": "^3.1.0",
-    "commander": "^2.20.0",
-    "fancy-log": "^1.3.3",
     "gemoji": "^4.2.1",
     "html-minifier": "^4.0.0",
     "js-yaml": "^3.7.0",
-    "json-merger": "^1.1.1",
     "log-symbols": "^3.0.0",
-    "markdown-it": "^8.4.2",
-    "mathjs": "^6.0.2",
+    "mathjax": "^2.7.5",
+    "mathjs": "^6.1.0",
     "node-emoji": "^1.10.0",
-    "prismjs": "^1.16.0",
-    "pug": "^2.0.3",
-    "winston": "^3.2.1"
+    "prismjs": "^1.17.1"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": ""
   },
-  "author": {
-    "name": "mithrayls",
-    "email": "mithray@protonmail.com",
-    "url": "https://mithrayls.github.io/"
-  }
+  "author": "mithrayls <mithray@protonmail.com> (https://mithrayls.github.io/)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mithrayls/smd-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mithrayls/smd-js/issues"
+  },
+  "homepage": "https://github.com/mithrayls/smd-js#readme"
 }

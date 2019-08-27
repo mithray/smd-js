@@ -2,7 +2,7 @@
 
 ## What is Semantic Markdown ? 
 
-Don't use this yet!
+DON'T USE THIS YET! I ACCIDENTALLY PUBLISHED THIS WHILE TESTING [MY SUPER DUPER AUTOPUBLISHING PACKAGE](https://www.npmjs.com/package/sempub)!! WHO COULD HAVE ANTICIPATED SUCH A THING???!?!?
 
 Semantic Markdown is a bit like a custom markdown development environment as well as contains a default implementation in javascript. The default implementation of SMD attempts to make easy marking up web pages with good HTML5 and schema, and contains tools for adding styling, so you can run it on a markdown document and immediately sent to a friend or upload it.
 
@@ -231,6 +231,26 @@ To be completed :grinning:.
 [TOOWTDI]: <https://wiki.python.org/moin/TOOWTDI>
 
 ## Release Notes
+
+### Release 0.1.9
+
+basic functionality
+headers
+unordered list
+em, strong, sub, sup
+ins, del, mark, comment
+mathjax
+
+
+### Release 0.1.8
+
+basic functionality
+headers
+unordered list
+em, strong, sub, sup
+ins, del, mark, comment
+mathjax
+
 
 ### Release 0.1.7
 
