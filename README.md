@@ -130,20 +130,20 @@ These are various flavors of markdown, some or all for which I hope to write rul
 
 ## Release Notes
 
+### Release 0.1.13
+
+added keywords to package.json
+
+
 ### Release 0.1.12
-
-tidy readme
-
-
-### Release 0.1.11
 
 tidy readme
 
 ### Release 0.1.8
 
-basic functionality
-headers
-unordered list
-em, strong, sub, sup
-ins, del, mark, comment
-mathjax
+* basic functionality
+* headers
+* unordered list
+* em, strong, sub, sup
+* ins, del, mark, comment
+* mathjax
