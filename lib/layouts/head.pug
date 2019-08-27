@@ -1,0 +1,47 @@
+head
+				
+	//-
+	//- Standard Tags
+	//-
+	meta( charset='utf-8')
+	meta( http-equiv='X-UA-Compatible'	content='IE=edge')
+	meta( name='viewport'								content='width=device-width, initial-scale=1')
+	link( rel='icon'										href='favicon.ico')
+	if page.description
+		meta( name='description'					content=page.description)
+	if page.keywords
+		meta( name='keyword'							content=page.keywords)
+	if page.uri
+		link( rel='canonical' 						href=page.uri)
+
+	//-
+	//- Meta - Open Graph - http://ogp.me/
+	//-
+	if page.og
+		meta( property="og:title"					content=page.og.title )
+		meta( property="og:type"					content=page.og.type )
+		meta( property="og:url"						content=page.og.url )
+		meta( property="og:image"					content=page.og.image )
+		meta( property="og:description"		content=page.og.description )
+		meta( property="og:site_name"			content=page.og.site_name )
+		meta( property="fb:admins"				content=page.fb.id )
+	
+	//-
+	//- Meta - Twitter - https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started
+	//-
+	if page.twitter
+		meta( name="twitter:card"					content=twitter.card)
+		meta( name="twitter:site" 				content=twitter.publisherHandle)
+		meta( name="twitter:title" 				content=twitter.title)
+		meta( name="twitter:description"	content=twitter.description)
+		meta( name="twitter:creator"			content=twitter.authorHandle)
+		meta( name="twitter:image"				content=twitter.image)
+
+	//-
+	//- Don't use Google Fonts
+	//-
+					
+	link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,600|Unna|Scheherazade|Cormorant|Halant|Lora&text=§&display=swap" rel="stylesheet")
+	link(href="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.10.3/math.min.js" rel="stylesheet")
+	style
+		include main.css

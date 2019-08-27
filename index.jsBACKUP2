@@ -1,0 +1,100 @@
+const path				= require('path')
+const yaml				= require('js-yaml')
+const changeCase		= require('change-case')
+const c = require('ansi-colors')
+const pug = require('pug')
+const log = require('./lib/log.js')
+
+const ruleset = require('./lib/rulesets/default.js')
+
+const settings = require('./lib/settings.js')
+const mergeDefaultOptions = require('./lib/helpers/mergeDefaultOptions.js')
+
+const verbosity = 0
+
+function changeNewLineChar(content, nl_char){
+	let regex = new RegExp('[\r\n]')
+	content = content.replace(regex, nl_char)
+	if (verbosity > 0) {
+		console.log(content)
+		console.log(nl_char)
+	}
+	return content
+}
+
+function getRules(ruleset){
+	let rules = []
+	let base_rules = []
+	if ( ruleset.rules !== "undefined" ){
+		rules = ruleset.rules
+		if (verbosity > 0) {
+			log.info(`ruleset ${c.blue(ruleset.name)} defined with rules:`)
+			console.log(rules)
+		}
+	}	else {
+		if (verbosity > 0) {
+			log.error('it is undefined')
+		}
+	}	
+	console.log('rules.matches')
+	rules.forEach( rule => {
+		if (rule.match){
+			console.log('has matches')
+			console.log( rule)
+						base_rules.push(rule)
+		} else {
+			console.log('parent rule')
+		}
+	})
+	return base_rules
+}
+
+function applyRuleset(content, ruleset){
+	let rules = getRules(ruleset)
+	let name = ruleset.name
+	let document_level = "x"
+	if (verbosity > 0) {
+		log.info(c.green(`applying ruleset ${c.bold.italic(name)} at level ${c.bold.italic(document_level)}`))
+		rules.forEach( rule => {
+			console.log(c.blue('  ' + rule.name +':')+c.blueBright(' ' + rule.description))
+		})
+	}
+	rules.forEach( rule => {
+		if (verbosity > 0) {
+			console.log( c.gray(`applying rule `) + c.blue(rule.name))
+		}
+		var regex_arr = rule.match
+		regex_arr.forEach( regex_info => {
+			let pattern = regex_info.pattern
+			let flags = regex_info.flags
+			let regex = new RegExp( pattern, flags )
+			content = content.replace(regex, function subRules(match, p1, p2){
+				let subrulesets = rule.rules
+				subrulesets.forEach( subruleset => {
+					p1 = applyRuleset(p1, subruleset)
+				})
+				return p1
+			})
+		})
+	})
+//	content = applyRuleset(content, rules)
+	return content
+}
+
+function smd( content, options ){
+	options = mergeDefaultOptions(options)
+	content = applyRuleset(content, ruleset)
+
+	if ( options.wrap ) {
+		let template_path = './lib/layouts/basic.pug'
+		let wrapper = pug.renderFile(template_path)
+		let wrapped_content = wrapper.replace(/<!--\s*template_content\s*-->/, content)
+		content = wrapped_content
+	}
+	if ( options.style ){}
+
+//	console.log(content)
+	return content
+}
+
+module.exports = smd

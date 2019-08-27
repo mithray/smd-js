@@ -1,0 +1,14 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "This is a new implementation that puts a whole lot more tools before you to use in your markdown documents with a special aim to use appropriate semantic and accessibilty functionality. It is also easy to extend with your own components. The program just runs a large set of regex on a markdown document to transform it into HTML5, with some additional boilerplate wrapping and styling options to make it really easy to have an immediately readable document. The regex are in groups categorized roughly according to how HTML Tag elements are categorized. It is easy to etxend by adding your own regex. It is currently quite slow.",
+  "main": "output.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-emoji": "^1.10.0"
+  }
+}

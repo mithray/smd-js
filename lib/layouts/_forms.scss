@@ -1,0 +1,54 @@
+$color_primary: rgba(100,110,120,.8);
+$color_font_dark: rgba(0,0,0,.8);
+
+* {
+	box-sizing: border-box;
+	transition: all 0.1s ease-in-out;
+}
+form {
+	font-family: var( --font-sans-serif, 'sans-serif' );
+	fieldset {
+		background: #fcfcfc;
+		border: .1em solid $color_primary;
+		border-radius: .5em;
+		margin: 1em 0em;
+	}
+	padding: 0;
+	margin: 0;
+	label {
+		margin: .2em;
+		display: flex;
+		align-items: center;
+		span {
+			display: inline-block;
+			width: 7em;
+		}
+		input {
+			margin: 0;
+			padding: 0;
+			background: #fefefe;
+			//flex: 10 1 auto;
+			display: inline-block;
+			&[disabled] {
+				color: $color_font_dark;
+			}
+		}
+		textarea {
+			display: inline-block;
+			background: #fefefe;
+			border: .1em solid $color_primary;
+			//flex: 5 1 auto;
+			height: 30em;
+		}
+		input, textarea {
+			flex: 1 1 auto;
+			border-radius: .2em;
+			border: .2em solid rgba( darken( $color_primary, 20%), 50%);
+			color: rgba(0,0,0,.8);
+			&:focus {
+				border: .2em solid rgba( lighten(saturate( $color_primary, 60%), 20%), 95%);
+				outline: .2em dotted rgba( lighten(saturate( $color_primary, 60%), 20%), 95%);
+			}
+		}
+	}
+}
