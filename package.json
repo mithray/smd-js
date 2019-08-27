@@ -1,6 +1,6 @@
 {
   "name": "@mithray/smd",
-  "version": "0.0.7",
+  "version": "0.0.12",
   "description": "A markdown flavor designed to be modular, customizable, with additional options like styling and HTML wrapping.",
   "bin": {
     "smd": "./bin/smd.js"
@@ -28,5 +28,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "mithrayls <mithray@protonmail.com> (https://mithrayls.github.io/)"
+  "author": {
+    "name": "mithrayls",
+    "email": "mithray@protonmail.com",
+    "url": "https://mithrayls.github.io/"
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "@mithray/smd@0.0.11"
 }
