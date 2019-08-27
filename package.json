@@ -1,6 +1,6 @@
 {
   "name": "@mithray/smd",
-  "version": "0.0.12",
+  "version": "0.0.52",
   "description": "A markdown flavor designed to be modular, customizable, with additional options like styling and HTML wrapping.",
   "bin": {
     "smd": "./bin/smd.js"
@@ -34,5 +34,5 @@
     "url": "https://mithrayls.github.io/"
   },
   "readme": "ERROR: No README data found!",
-  "_id": "@mithray/smd@0.0.11"
+  "_id": "@mithray/smd@0.0.12"
 }
