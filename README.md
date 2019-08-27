@@ -2,7 +2,7 @@
 
 ## Introduction
 
-DON'T USE THIS YET! I ACCIDENTALLY PUBLISHED THIS WHILE TESTING [MY SUPER DUPER AUTOPUBLISHING PACKAGE](https://www.npmjs.com/package/sempub)!! WHO COULD HAVE ANTICIPATED SUCH A THING???!?!?
+DON'T USE THIS YET! I RECOMMEND WAITING FOR VERSION 1.0.0
 
 Semantic Markdown is a bit like a custom markdown development environment as well as contains a default implementation in javascript. The default implementation of SMD attempts to make easy marking up web pages with good HTML5 and schema, and contains tools for adding styling, so you can run it on a markdown document and immediately sent to a friend or upload it.
 
@@ -19,9 +19,13 @@ Semantic Markdown is a bit like a custom markdown development environment as wel
 
 The purpose of this project is to:
 
-* Help create custom markdown implementations.
-* Unify markdown implementations by providing a set of rules to transform them into each other, making markdown implementation an authoring choice, not a developer choice.
-* Provide an implementation similar to the original markdown but with many "bells and whistles", making authoring fun. 
+* Help create custom markdown flavors.
+* Translate markdown flavors into each other.
+* Make markdown settings an authoring choice, not a developer choice.
+* Create a powerful, intuitive default implementation with many "bells and whistles".
+* Provide Authoring language suggestions similarly to [Grammarly][] and [Readable][], but integrated into the development pipeline.
+* Make Semantic HTML and Schema markup easy and fun to create.
+* Making authoring fun.
 
 ## Design 
 
@@ -35,8 +39,8 @@ The principles here are given in order of preference. The construction of the de
 
 ## Roadmap
 
-- [/] Base Rules
-	- [/] headings
+- [ ] Base Rules
+	- [ ] headings
     - [x] h1-h6: left side atx headings
     - [ ] h1-h6: two side atx headings
     - [ ] h1-h6: setext style headings
@@ -48,7 +52,7 @@ The principles here are given in order of preference. The construction of the de
     - [x] strong
     - [x] sub
     - [x] sup
-  - [/] Code
+  - [ ] Code
     - [x] inline code
     - [x] block code
     - [ ] testing
@@ -65,7 +69,7 @@ The principles here are given in order of preference. The construction of the de
   - [ ] Reference links
   - [ ] Schema ontology links
 - [ ] Interpreters
-  - [/] Mathjs
+  - [ ] Mathjs
     - [x] Math expression toTex
     - [x] Evaluate inline Math
     - [ ] testing
@@ -85,14 +89,18 @@ The principles here are given in order of preference. The construction of the de
 	- [ ] Audio
 
 These are various flavors of markdown, some or all for which I hope to write rulesets using `smd` interpretable yaml specifications.
-- [ ] Complete Rulesets
+- [ ] Initial Custom Rulesets
+  - [ ] smd-naked: [gfm][], [vfmd][] or something simple.
+  - [ ] smd-extended: Consistend with a simple form of markdown, but with extensions.
+  - [ ] smd-elite: Full featured but with redesigned syntax. Efficient, but against convention.
+- [ ] Existing Rulesets
 	- [ ] [CommonMark](http://spec.commonmark.org/)
 	- [ ] [CriticMarkup](http://criticmarkup.com/spec.php)
 	- [ ] [Discount](http://www.pell.portland.or.us/~orc/Code/discount/#Language.extensions)
 	- [ ] [DocFX](https://dotnet.github.io/docfx/index.html)
 	- [ ] [Ghost's Markdown/Haunted Markdown](https://github.com/TryGhost/Ghost/wiki/Future-of-Markdown#features)
 	- [ ] [GitHub Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/)
-	- [ ] [with login](https://gitlab.com/help/user/markdown.md)
+	- [ ] [Gitlab](https://gitlab.com/help/user/markdown.md)
 	- [ ] [Haroopad Flavored Markdown](http://pad.haroopress.com/page.html?f=haroopad-flavored-markdown)
 	- [ ] [iA Writer's Markdown](https://ia.net/writer/support/general/markdown-guide)
 	- [ ] [Kramdown](http://kramdown.gettalong.org/quickref.html)
@@ -127,8 +135,16 @@ These are various flavors of markdown, some or all for which I hope to write rul
 [original markdown]: <https://daringfireball.net/projects/markdown/syntax> "the original markdown"
 [vfmd]: <https://www.vfmd.org/> "Vanilla Flavored Markdown"
 [TOOWTDI]: <https://wiki.python.org/moin/TOOWTDI>
+[Grammarly]: <https://www.grammarly.com> "grammarly.com"
+[Readable]: <https://readable.com> "readable.com"
+[gfm]: <https://github.github.com/gfm/> "Github Flavored Markdown"
 
 ## Release Notes
+
+### Release 0.1.14
+
+add to readme specs
+
 
 ### Release 0.1.13
 
