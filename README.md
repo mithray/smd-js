@@ -2,6 +2,8 @@
 
 ## What is Semantic Markdown ? 
 
+Don't use this yet!
+
 Semantic Markdown is a bit like a custom markdown development environment as well as contains a default implementation in javascript. The default implementation of SMD attempts to make easy marking up web pages with good HTML5 and schema, and contains tools for adding styling, so you can run it on a markdown document and immediately sent to a friend or upload it.
 
 ## Installation
@@ -227,3 +229,9 @@ To be completed :grinning:.
 [original markdown]: <https://daringfireball.net/projects/markdown/syntax> "the original markdown"
 [vfmd]: <https://www.vfmd.org/> "Vanilla Flavored Markdown"
 [TOOWTDI]: <https://wiki.python.org/moin/TOOWTDI>
+
+## Release Notes
+
+### Release 0.1.3
+
+test init
