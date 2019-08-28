@@ -89,11 +89,13 @@ The principles here are given in order of preference. The construction of the de
   - [ ] Audio
 
 These are various flavors of markdown, some or all for which I hope to write rulesets using `smd` interpretable yaml specifications.
+
 - [ ] Initial Custom Rulesets
   - [ ] smd-naked: [gfm][], [vfmd][] or something simple.
   - [ ] smd-extended: Consistend with a simple form of markdown, but with extensions.
   - [ ] smd-elite: Full featured but with redesigned syntax. Efficient, but against convention.
-- [ ] Existing Rulesets
+
+- [ ] Existing Markdown Standards
   - [ ] [CommonMark](http://spec.commonmark.org/)
   - [ ] [CriticMarkup](http://criticmarkup.com/spec.php)
   - [ ] [Discount](http://www.pell.portland.or.us/~orc/Code/discount/#Language.extensions)
@@ -141,6 +143,10 @@ These are various flavors of markdown, some or all for which I hope to write rul
 
 ## Release Notes
 
+### Release 0.1.15
+
+* Tidy README.md
+
 ### Release 0.1.14
 
 add to readme specs
@@ -153,12 +159,23 @@ added keywords to package.json
 
 tidy readme
 
-
 ### Release 0.1.8
 
 * basic functionality
 * headers
 * unordered list
-* em, strong, sub, sup
-* ins, del, mark, comment
+
+Phrasing Markup
+* em
+* strong
+* sub
+* sup
+
+Critic Markup
+* ins
+* del
+* mark
+* comment
+
+Math
 * mathjax
