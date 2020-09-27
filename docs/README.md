@@ -95,17 +95,17 @@ console.log( "escaped emoji shortcode: :coffee:")
 let something = new_val
 ```
 
-* ins {++ins++}
-* del {--del--}
-* mark {==mark==}
-* comment {>>comment<<}
+- ins {++ins++}
+- del {--del--}
+- mark {==mark==}
+- comment {>>comment<<}
 
 # Semantic Markdown
 
 Semantic Markdown features a linguistic heirarchy with customization ability that intends to be able to confirm to any markdown spec by modifying a set of parameters. Commonmark also defines a kind of heirarchy, where blocks can be parents of blocks and inlines, and inlines can be parents of other inlines. SMD makes the same distinction as is done in many programming languages, parent and child, rather than block and inline. However, it is also the case that inlines cannot be parents of blocks, such as an (such as an em tag enclosing a paragraph). But these rules are specified *per scope*. In the scope of an inline element, the parsing of blocks is not defined. The parsing algorithm works top down, breadth first, defining blocks, which each have their own rulesets. You can define a block to be conforming to different markdown specs, charts, maths, abcjs, code-highlighting(where most inline styling and typographic replacements are not defined). By default, the root block is a special flavor of markdown, Semantic Markdown, but this can be changed by declaring the syntax in front matter. Each syntax has its own heirarchical interpretation, even if heirarchies of this kind were not the way those flavors originally interpreted themselves. This allows dialects to coexist together.
 
 
-As readability is the primary goald, by default, you can use Semantic Markdown without any front matter, and most basic syntax follows commonmark. 
+As readability is the primary goal, by default, you can use Semantic Markdown without any front matter, and most basic syntax follows commonmark. 
 
 ---
 flavor: commonmark

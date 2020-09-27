@@ -6,10 +6,7 @@ const rulesets			  = {
 
 function smd(markdown, ruleset = rulesets.default){
   
-	let html = applyRuleset( markdown, ruleset )
-
-//	console.log(html)
-  return html
+	return applyRuleset( markdown, ruleset )
 	
 }
 
