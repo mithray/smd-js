@@ -34,8 +34,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": ""
+    "test": "node ./spec/test.js",
+    "start": "./bin/smd.js"
   },
   "author": "mithrayls <mithray@protonmail.com> (https://mithrayls.github.io/)",
   "repository": {

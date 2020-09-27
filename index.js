@@ -1,11 +1,15 @@
-const applyRuleset	= require('./lib/applyRuleset.js')
-const ruleset				= require('./lib/rules/default_set.js')
+const applyRuleset	  = require('./lib/applyRuleset.js')
+const rulesets			  = {
+  default: require('./lib/rules/default_set.js'),
+  defaultPage: require('./lib/rules/default_set.js')
+}
 
-function smd(markdown){
-
+function smd(markdown, ruleset = rulesets.default){
+  
 	let html = applyRuleset( markdown, ruleset )
 
-	console.log(html)
+//	console.log(html)
+  return html
 	
 }
 
