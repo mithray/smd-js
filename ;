@@ -1,0 +1,71 @@
+const allRules = require('../rules.js')
+const c = require('ansi-colors')
+const rules = {
+  root: allRules.filter(el=>{
+    return ['ul'].includes(el.nodeName)
+  }) ,
+  ul: allRules.filter(el=>{
+    return ['li'].includes(el.nodeName)
+  }),
+  li: []
+}
+function transpile(smd, nodeName = 'root'){
+  const blocks = []
+  const nodeRules = rules[nodeName]
+  if(!nodeRules) return smd
+  //console.log(nodeRules)
+  let html = smd
+  
+  for ( let i = 0; i < nodeRules.length; i++){
+    let rule = nodeRules[i]
+    let subnodeName = rule['nodeName']
+/*
+console.log('rule')
+console.log(rule)
+console.log('subnodeName')
+console.log(subnodeName)
+*/
+    let found = html.matchAll(rule.regex)
+    
+    for(const match of found){
+/*
+      console.log(c.blue('---1---'))
+      console.log(match)
+      console.log(c.blue('---/1---'))
+*/
+//      match[1]=transpile(match[1],subnodeName) // transpile ``
+/*
+      console.log(c.red('---2---'))
+      console.log(match[1])
+      console.log(c.red('---/2---'))
+//      match[1]=rule.func(match[1])//transpile(match[0],subnodeName)
+      console.log(c.green('---3---'))
+      console.log(match[1])
+      console.log(c.green('---/3---'))
+console.log(match)
+*/
+      blocks.push(match)
+    }
+  }
+console.log(blocks)
+  tracker = 0//blocks[0].index
+  newHtml = ''//html.substring(0,tracker)
+  for(let i = 0; i < blocks.length; i++){
+    newHtml += html.substring(tracker,blocks[i][1])
+    tracker += blocks[i][1].length
+  }
+console.log(newHtml)
+  return newHtml
+}
+
+module.exports = transpile
+
+const smd = `# Semantic Markdown (SMD)
+DON'T USE THIS YET! I RECOMMEND WAITING FOR VERSION 1.0.0
+- list one
+- list two
+oaeu
+- oeua333e
+Semantic Markdown is a bit like a custom markdown development environment as well as contains a default implementation in javascript. The default implementation of SMD attempts to make easy marking up web pages with good HTML5 and schema, and contains tools for adding styling, so you can run it on a markdown document and immediately sent to a friend or upload it.`
+transpile(smd)
+//console.log(transpile(smd))

@@ -20,24 +20,13 @@ const fragment2={
 }
 
 const fragment = {
-  "nodeName": "div",
-  "tagName": "div",
-  "attrs": [],
-  "childNodes": [
-    {
-      "nodeName": "ul",
-      "tagName": "ul",
-      "attrs": [],
-      "childNodes": {[
-        "tagName": "li",
-        "attrs": [],
-        "childNodes": [
-          {
-            "nodeName": "#text",
-            "value": "undefinedlist one"
-          }
-        ]
-      ]}
-    }]}
+  tagName: 'div',
+  nodeName: 'div',
+  attrs: [],
+  childNodes: [{
+    nodeName: '#text',
+    value: "# Semantic Markdown (SMD)\nDON'T USE THIS YET! I RECOMMEND WAITING FOR "
+  }]
+}
 
 console.log(parse5.serialize(fragment))
