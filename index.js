@@ -1,7 +1,7 @@
 const applyRuleset	  = require('./lib/applyRuleset.js')
 const rulesets			  = {
-  default: require('./lib/rules/default_set.js'),
-  defaultPage: require('./lib/rules/default_set.js')
+  default: require('./lib/rulesets/default.js'),
+  defaultPage: require('./lib/rulesets/default.js')
 }
 
 function smd(markdown, ruleset = rulesets.default){

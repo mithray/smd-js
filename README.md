@@ -77,6 +77,7 @@ The principles here are given in order of preference. The construction of the de
   - [ ] chart.js (charts)
   - [ ] mermaid.js (uml digrams)
   - [ ] abcjs (music)
+  - [ ] open street map with leaflet
 - [ ] Language and Syntax Tools
   - [ ] Browser Inline Dictionary lookup
   - [ ] readeasy suggestions on compilation
