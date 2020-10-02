@@ -48,7 +48,25 @@ async function getLocData(){
            }
           }
 			  }]
-			}
+			},
+    	tooltips: {
+    		intersect: false,
+    		mode: 'index',
+    		callbacks: {
+    			label(tooltipItem, data) {
+    				const dataset = data.datasets[tooltipItem.datasetIndex];
+  	  			const point = dataset.data[tooltipItem.index];
+
+			    	if (!helpers.isNullOrUndef(point.y)) {
+    					return Chart__default['default'].defaults.tooltips.callbacks.label(tooltipItem, data);
+		    		}
+
+    				const {o, h, l, c} = point;
+
+		    		return 'O: ' + o + '  H: ' + h + '  L: ' + l + '  C: ' + c;
+			    }
+    		}
+    	}
 		}
   }
   var languages = []
