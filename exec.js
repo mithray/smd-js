@@ -94,8 +94,10 @@ async function getLocData(){
     commits.unshift(obj)
   }
 
-  console.log(c.bold(`Switching back to original commit: ${c.green(commits[commits.length - 1].hash)}`))
-  await exec(`git checkout ${commits[commits.length - 1].hash}`)
+//  console.log(c.bold(`Switching back to original commit: ${c.green(commits[commits.length - 1].hash)}`))
+//  await exec(`git checkout ${commits[commits.length - 1].hash}`)
+  console.log(c.bold(`Switching back to original commit: ${c.green(master)}`))
+  await exec(`git checkout master`)
 
   commits.forEach((commit) => {
     commit.linesOfCode.forEach((language) => {
@@ -120,7 +122,7 @@ async function getLocData(){
       fill: false,
       data: []
     }
-
+    return obj
   }
   languages.forEach(language=>{
     obj = generateDatasetObject(language)
