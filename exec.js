@@ -1,6 +1,11 @@
 const util = require('util')
-const exec = util.promisify(require('child_process').exec)
+const execute = util.promisify(require('child_process').exec)
+const c = require('ansi-colors')
 
+async function exec(command){
+  console.log(c.bold(`Running command ${c.green(command)}...`))
+  return await execute(command)
+}
 //timestamp=$(git show -s --format=%ct)
 //date=$(git show -s --format=%cI); snap run scc --format json | jq ".[] | { name: .Name, lines: .Lines, timestamp: ${timestamp}, date: \"${date}\"}"
 
@@ -89,7 +94,7 @@ async function getLocData(){
     commits.unshift(obj)
   }
 
-  console.log(`checking out ${commits[commits.length - 1].hash}`)
+  console.log(c.bold(`Switching back to original commit: ${c.green(commits[commits.length - 1].hash)}`))
   await exec(`git checkout ${commits[commits.length - 1].hash}`)
 
   commits.forEach((commit) => {
