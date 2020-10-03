@@ -126,7 +126,7 @@ async function getLocData(){
     obj = generateDatasetObject(language)
     config.data.datasets.push(obj)
   })
-  generateDatasetObject('Total')
+  obj = generateDatasetObject('Total')
   config.data.datasets.push(obj)
   commits.forEach((commit) => {
     config.data.labels.push(commit.date)
@@ -143,7 +143,7 @@ async function getLocData(){
         config.data.datasets[index].data.push(0)
       }
     })
-    config.data.datasets['total'].data.push(totalCommitLoc)
+    config.data.datasets['Total'].data.push(totalCommitLoc)
   })
   const json = JSON.stringify(config)
   console.log(json)
