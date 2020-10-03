@@ -143,7 +143,10 @@ async function getLocData(){
         config.data.datasets[index].data.push(0)
       }
     })
-    config.data.datasets['Total'].data.push(totalCommitLoc)
+    const index = config.data.datasets.findIndex((obj)=>{
+      return obj.label === 'Total'
+    })
+    config.data.datasets[index].data.push(totalCommitLoc)
   })
   const json = JSON.stringify(config)
   console.log(json)
