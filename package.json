@@ -6,7 +6,7 @@
     "smd": "./bin/smd.js"
   },
   "scripts": {
-    "preinstall": "./lib/helpers/whatwgCategoryGenerator.js",
+    "postinstall": "node ./lib/helpers/whatwgCategoryGenerator.js",
     "test": "node ./spec/test.js",
     "start": "./bin/smd.js"
   },
