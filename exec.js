@@ -104,35 +104,46 @@ async function getLocData(){
       }
     })
   })
-  languages.forEach(language=>{
+  function generateRandomColorString(){
     const red = Math.round(0 + Math.random()*255)
     const green = Math.round(0 + Math.random()*255)
     const blue = Math.round(0 + Math.random()*255)
     const opacity = (0.8 + Math.random() / 5).toPrecision(2)
-
-    color = `rgba(${red},${green},${blue},${opacity})`
+    return `rgba(${red},${green},${blue},${opacity})`
+  }
+  function generateDatasetObject(label){
+    color = generateRandomColorString()
     obj = {
-      label: language,
+      label: label,
       backgroundColor: color,
       borderColor: color,
       fill: false,
       data: []
     }
+
+  }
+  languages.forEach(language=>{
+    obj = generateDatasetObject(language)
     config.data.datasets.push(obj)
   })
+  generateDatasetObject('Total')
+  config.data.datasets.push(obj)
   commits.forEach((commit) => {
     config.data.labels.push(commit.date)
+    var totalCommitLoc = 0
     languages.forEach((language) => {
-        const index = config.data.datasets.findIndex((obj)=>{
-          return obj.label === language
-        })
+      const index = config.data.datasets.findIndex((obj)=>{
+        return obj.label === language
+      })
       const languageStats = commit.linesOfCode.find((obj)=>{return obj.Name === language})
       if(languageStats){
         config.data.datasets[index].data.push(languageStats.Lines)
+        totalCommitLoc += languageStats.Lines
       } else {
         config.data.datasets[index].data.push(0)
       }
     })
+    config.data.datasets['total'].data.push(totalCommitLoc)
   })
   const json = JSON.stringify(config)
   console.log(json)
