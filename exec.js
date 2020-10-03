@@ -6,8 +6,6 @@ async function exec(command){
   console.log(c.bold(`Running command ${c.green(command)}...`))
   return await execute(command)
 }
-//timestamp=$(git show -s --format=%ct)
-//date=$(git show -s --format=%cI); snap run scc --format json | jq ".[] | { name: .Name, lines: .Lines, timestamp: ${timestamp}, date: \"${date}\"}"
 
 async function getLocData(){
   const commits = []
@@ -39,8 +37,6 @@ async function getLocData(){
 							labelString: 'Lines of Code'
 					},
           ticks: {
-            min: 0,
-            suggestedMax: 10000,
             callback: function (value, index, values) {
               if (value === 1000000) return "1M"
               if (value === 100000) return "100K"
