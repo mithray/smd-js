@@ -96,7 +96,7 @@ async function getLocData(){
 
 //  console.log(c.bold(`Switching back to original commit: ${c.green(commits[commits.length - 1].hash)}`))
 //  await exec(`git checkout ${commits[commits.length - 1].hash}`)
-  console.log(c.bold(`Switching back to original commit: ${c.green(master)}`))
+  console.log(c.bold(`Switching back to original commit: ${c.green('master')}`))
   await exec(`git checkout master`)
 
   commits.forEach((commit) => {
