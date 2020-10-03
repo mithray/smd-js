@@ -68,8 +68,8 @@ async function getLocData(){
 			    }
     		}
     	}
-		}
 */
+		}
   }
   var languages = []
   const gitLog = await exec('git log')
@@ -77,7 +77,7 @@ async function getLocData(){
       return res.stdout.matchAll(/commit (?<hash>.*)/g)
     })
   for (commit of gitLog){
-    console.log(`git checkout ${commits.groups.hash}`)
+    console.log(`git checkout ${commit.groups.hash}`)
     await exec(`git checkout ${commit.groups.hash}`)
     const obj = {
       date: (await exec('git show -s --format=%cI')).stdout,
