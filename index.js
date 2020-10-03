@@ -1,12 +1,12 @@
-const applyRuleset	  = require('./lib/applyRuleset.js')
-const rulesets			  = {
-  default: require('./lib/rulesets/default.js'),
-  defaultPage: require('./lib/rulesets/default.js')
-}
+const convert = require('./lib/convert.js')
 
-function smd(markdown, ruleset = rulesets.default){
+function smd(args){
+  args.text = args.text ? args.text : undefined
+  args.inputFormat = args.inputFormat ? args.inputFormat : 'smd'
+  args.outputFormat = args.outputFormat ? args.outputFormat: 'html'
+  args.nodeName = args.nodeName ? args.nodeName : 'root'
   
-	return applyRuleset( markdown, ruleset )
+	return convert( args )
 	
 }
 
