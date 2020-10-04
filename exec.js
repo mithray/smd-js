@@ -73,6 +73,7 @@ async function getLocData(){
 		}
   }
   var languages = []
+  const workingBranch = await exec('git rev-parse --abbrev-ref HEAD')
   const gitLog = await exec('git log')
     .then((res) => {
       return res.stdout.matchAll(/commit (?<hash>.*)/g)
@@ -92,8 +93,8 @@ async function getLocData(){
 
 //  console.log(c.bold(`Switching back to original commit: ${c.green(commits[commits.length - 1].hash)}`))
 //  await exec(`git checkout ${commits[commits.length - 1].hash}`)
-  console.log(c.bold(`Switching back to original commit: ${c.green('master')}`))
-  await exec(`git checkout master`)
+  console.log(c.bold(`Switching back to working branch: ${c.green(workingBranch)}`))
+  await exec(`git checkout ${workingBranch}`)
 
   commits.forEach((commit) => {
     commit.linesOfCode.forEach((language) => {
