@@ -7,7 +7,7 @@
   },
   "scripts": {
     "postinstall": "node ./lib/helpers/whatwgCategoryGenerator.js",
-    "test": "node ./spec/test.js",
+    "test": "node ./spec/test.js .README.md",
     "start": "./bin/smd.js"
   },
   "keywords": [

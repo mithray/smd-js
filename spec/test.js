@@ -4,7 +4,8 @@ const fs = require('fs')
 const path = require('path')
 const validator = require('html-validator')
   
-async function test(md){
+async function test(mdPath){
+  const md = fs.readFileSync(path.resolve(mdPath),'utf8')
   const html = smd(md)
   const options = {
     validator: 'WHATWG',
@@ -27,5 +28,4 @@ async function test(md){
   }
 }
 
-const md = fs.readFileSync(path.join(__dirname,'../.README.md'),'utf8')
-test(md)
+test(process.argv[2])
