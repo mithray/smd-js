@@ -1,11 +1,11 @@
 const smd = require('../index.js')
+const c = require('ansi-colors')
 const fs = require('fs')
 const path = require('path')
 const validator = require('html-validator')
   
 async function test(md){
   const html = smd(md)
-console.log(html)
   const options = {
     validator: 'WHATWG',
     data: html,
@@ -13,11 +13,17 @@ console.log(html)
   }
   try {
     const result = await validator(options)
+    console.log(c.green('validator completed'))
+    console.log(c.green('html:'))
     console.log(html)
- //   console.log(result)
+    console.log(c.green('validator result:'))
+    console.log(result)
   } catch (error) {
-  //  console.log(html)
-//    console.error(error)
+    console.log(c.red('error found'))
+    console.log(c.red('html:'))
+    console.log(html)
+    console.log(c.red('error:'))
+    console.error(error)
   }
 }
 
