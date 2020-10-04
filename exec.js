@@ -144,7 +144,7 @@ async function getLocData(){
         config.data.datasets[index].data.push(languageStats.Lines)
         totalCommitLoc += languageStats.Lines
       } else {
-        config.data.datasets[index].data.push(0)
+        //config.data.datasets[index].data.push(0)
       }
     })
     const index = config.data.datasets.findIndex((obj)=>{
