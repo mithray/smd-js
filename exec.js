@@ -72,13 +72,13 @@ async function getLocData(){
 */
 		}
   }
-  const diff = await exec('git diff')
-  if(diff.stdout.length > 0){
+  const diff = (await exec('git diff')).stdout
+  if(diff.length > 0){
     console.log(c.red.bold("Detected uncommited changes, please commit changes before running the lines of code counter"))
     return
   }
   var languages = []
-  const workingBranch = await exec('git rev-parse --abbrev-ref HEAD')
+  const workingBranch = (await exec('git rev-parse --abbrev-ref HEAD')).stdout
   const gitLog = await exec('git log')
     .then((res) => {
       return res.stdout.matchAll(/commit (?<hash>.*)/g)
