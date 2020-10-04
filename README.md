@@ -82,8 +82,6 @@ The principles here are given in order of preference. The construction of the de
   - [ ] Browser Inline Dictionary lookup
   - [ ] readeasy suggestions on compilation
 - [ ] Front Matter
-- [ ] Editing of rules using YAML files
-- [ ] Writing yaml rulesets for various markdown flavors
 - [ ] Include Components
   - [ ] Forms
   - [ ] Video
