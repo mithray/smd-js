@@ -131,7 +131,8 @@ async function getLocData(){
     config.data.datasets.push(obj)
   })
   obj = generateDatasetObject('Total')
-  obj.color = 'rgba(100,120,140,0.99)'
+  obj.backgroundColor = 'rgba(100,120,140,0.99)'
+  obj.borderColor = 'rgba(100,120,140,0.99)'
   config.data.datasets.push(obj)
   commits.forEach((commit) => {
     config.data.labels.push(commit.date)
