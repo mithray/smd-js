@@ -72,6 +72,11 @@ async function getLocData(){
 */
 		}
   }
+  const diff = await exec('git diff')
+  if(diff.stdout > 0){
+    console.log(c.red.bold("Detected uncommited changes, please commit changes before running the lines of code counter"))
+    return
+  }
   var languages = []
   const workingBranch = await exec('git rev-parse --abbrev-ref HEAD')
   const gitLog = await exec('git log')
