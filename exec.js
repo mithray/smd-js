@@ -3,7 +3,7 @@ const execute = util.promisify(require('child_process').exec)
 const c = require('ansi-colors')
 
 async function exec(command){
-  console.log(c.dim(`Running command ${c.green(command)}...`))
+  console.log(c.dim(`Running command: `) + c.green(command))
   return await execute(command)
 }
 
