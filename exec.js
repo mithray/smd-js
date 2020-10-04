@@ -112,7 +112,7 @@ async function getLocData(){
     const red = Math.round(0 + Math.random()*255)
     const green = Math.round(0 + Math.random()*255)
     const blue = Math.round(0 + Math.random()*255)
-    const opacity = (0.8 + Math.random() / 5).toPrecision(2)
+    const opacity = (0.2 + Math.random() / 5).toPrecision(2)
     return `rgba(${red},${green},${blue},${opacity})`
   }
   function generateDatasetObject(label){
@@ -131,6 +131,7 @@ async function getLocData(){
     config.data.datasets.push(obj)
   })
   obj = generateDatasetObject('Total')
+  obj.color = 'rgba(100,120,140,0.95)'
   config.data.datasets.push(obj)
   commits.forEach((commit) => {
     config.data.labels.push(commit.date)
