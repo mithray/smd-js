@@ -73,7 +73,7 @@ async function getLocData(){
 		}
   }
   const diff = await exec('git diff')
-  if(diff.stdout > 0){
+  if(diff.stdout.length > 0){
     console.log(c.red.bold("Detected uncommited changes, please commit changes before running the lines of code counter"))
     return
   }
