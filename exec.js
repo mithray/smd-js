@@ -79,6 +79,7 @@ async function getLocData(){
   }
   var languages = []
   const workingBranch = (await exec('git rev-parse --abbrev-ref HEAD')).stdout
+  console.log(c.bold(`Detected working branch: `) + c.green.bold(workingBranch))
   const gitLog = await exec('git log')
     .then((res) => {
       return res.stdout.matchAll(/commit (?<hash>.*)/g)
