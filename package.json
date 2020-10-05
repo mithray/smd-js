@@ -7,7 +7,8 @@
   },
   "scripts": {
     "postinstall": "node ./lib/helpers/whatwgCategoryGenerator.js",
-    "test": "node ./spec/test.js .README.md",
+    "test": "npm run -s buildReadme",
+    "buildReadme": "node ./spec/test.js .README.md",
     "start": "./bin/smd.js"
   },
   "keywords": [
@@ -16,6 +17,9 @@
     "html",
     "schema",
     "math.js",
+    "mathjs",
+    "latex",
+    "katex",
     "mathjax",
     "abcjs",
     "mermaid.js",

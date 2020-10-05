@@ -52,7 +52,7 @@ The principles here are given in order of preference. The construction of the de
     - [x] strong
     - [x] sub
     - [x] sup
-  - [ ] Code
+  - [/] Code
     - [x] inline code
     - [x] block code
     - [ ] testing
