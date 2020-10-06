@@ -1,5 +1,5 @@
 const smd = require('../index.js')
-const debug = true
+process.env.DEBUG = ''
 const validate = false
 const c = require('ansi-colors')
 const fs = require('fs')
@@ -9,13 +9,13 @@ if(validate){
 }
   
 async function test(mdPath){
-  if(debug) console.time('TEST')
-  if(debug) console.time('READ_MARKDOWN_FILE_FROM_DISK')
+  if(process.env.DEBUG) console.time('TEST')
+  if(process.env.DEBUG) console.time('READ_MARKDOWN_FILE_FROM_DISK')
   const md = fs.readFileSync(path.resolve(mdPath),'utf8')
-  if(debug) console.timeEnd('READ_MARKDOWN_FILE_FROM_DISK') 
-  if(debug) console.time('MARKDOWN_TRANSFORMED')
+  if(process.env.DEBUG) console.timeEnd('READ_MARKDOWN_FILE_FROM_DISK') 
+  if(process.env.DEBUG) console.time('MARKDOWN_TRANSFORMED')
   const html = smd(md)
-  if(debug) console.timeEnd('MARKDOWN_TRANSFORMED')
+  if(process.env.DEBUG) console.timeEnd('MARKDOWN_TRANSFORMED')
   if(validate){
     const options = {
       validator: 'WHATWG',
@@ -23,9 +23,9 @@ async function test(mdPath){
       isFragment: true
     }
     try {
-      if(debug) console.time('VALIDATION')
+      if(process.env.DEBUG) console.time('VALIDATION')
       const result = await validator(options)
-      if(debug) console.timeEnd('VALIDATION')
+      if(process.env.DEBUG) console.timeEnd('VALIDATION')
       console.log(c.green('validator completed'))
       console.log(c.green('html:'))
       console.log(html)
@@ -39,9 +39,8 @@ async function test(mdPath){
       console.error(error)
     }
   }
-  if(debug) console.timeEnd('TEST')
-  //console.log(c.green('html:'))
-//  console.log(html)
+  if(process.env.DEBUG) console.timeEnd('TEST')
+  console.log(html)
   return html
 }
 
