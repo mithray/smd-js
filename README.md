@@ -29,9 +29,9 @@ The purpose of this project is to:
 
 ## Design 
 
-1. Hackable.
+1. Hackable. Provide parsers and an interface to send rules. Let the software apply those rules.
 2. Human Readable.
-3. Expressive. Low language redundancy. This is similar to Pythons principle of [There's Only One Way To Do It][TOOWTDI]
+3. Low language redundancy. [There's Only One Way To Do It][TOOWTDI]
 4. Input and Output Document should look as close as is possible. For example, a plain text file written in SMD should resemble how a browser renders the output HTML.
 5. Sticks as close as possible to the original markdown.
 
